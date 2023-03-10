@@ -1,0 +1,10 @@
+
+public class DemoAutomationClass {
+
+	public static void main(String[] args) {
+	
+		OperaDriver driver = new OperaDriver();
+
+	}
+
+}
