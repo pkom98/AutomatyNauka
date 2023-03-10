@@ -19,19 +19,9 @@ public class FullOrderSauceLabs {
 
         driver.get("https://www.saucedemo.com");
         driver.manage().window().maximize();
-        WebElement Username = driver.findElement(By.xpath("//*[@id=\"user-name\"]"));
-        Username.click();
-        Username.sendKeys("standard_user");
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"password\"]")));
-
-        WebElement Password = driver.findElement(By.xpath("//*[@id=\"password\"]"));
-        Password.click();
-        Password.sendKeys("secret_sauce");
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"login-button\"]")));
-
-        WebElement LoginButton = driver.findElement(By.xpath("//*[@id=\"login-button\"]"));
-        LoginButton.click();
-
+        LoginCorrectSauceLabs.login(driver, wait); // Podejscie nr 1
+        LoginPage loginPage = new LoginPage(driver, wait);
+        loginPage.login();
         WebElement BackpackButton = driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-backpack\"]"));
         BackpackButton.click();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"add-to-cart-sauce-labs-bike-light\"]")));

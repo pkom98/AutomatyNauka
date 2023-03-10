@@ -18,21 +18,8 @@ public class LoginIncorrectSauceLabs {
 
         driver.get("https://www.saucedemo.com");
         driver.manage().window().maximize();
-        WebElement Username = driver.findElement(By.xpath("//*[@id=\"user-name\"]"));
-            Username.click();
-            Username.sendKeys("IncorrectUsername");
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"password\"]")));
-
-        WebElement Password = driver.findElement(By.xpath("//*[@id=\"password\"]"));
-            Password.click();
-            Password.sendKeys("IncorrectPassword");
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"login-button\"]")));
-
-        WebElement LoginButton = driver.findElement(By.xpath("//*[@id=\"login-button\"]"));
-            LoginButton.click();
-
-
-
+        LoginPage loginPage = new LoginPage(driver, wait);
+        loginPage.login();
 
     }
 }
