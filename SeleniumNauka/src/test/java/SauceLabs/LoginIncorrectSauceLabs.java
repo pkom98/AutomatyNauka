@@ -19,7 +19,7 @@ public class LoginIncorrectSauceLabs {
         driver.get("https://www.saucedemo.com");
         driver.manage().window().maximize();
         LoginPage loginPage = new LoginPage(driver, wait);
-        loginPage.login();
+        loginPage.login("IncorrectUser", "IncorrectPassword");
 
     }
 }

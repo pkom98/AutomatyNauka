@@ -1,8 +1,8 @@
-package SauceLabs;
+package SauceLabs.dziedziczenie;
 
 public class Dog {
 
-    private String name;
+    protected String name;
 
     public Dog(String name) {
         this.name = name;

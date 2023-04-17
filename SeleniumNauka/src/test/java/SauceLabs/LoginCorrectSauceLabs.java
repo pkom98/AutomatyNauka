@@ -52,5 +52,5 @@ public class LoginCorrectSauceLabs {
         WebElement LoginButton = driver.findElement(By.xpath("//*[@id=\"login-button\"]"));
         LoginButton.click();
     }
-
+//LoginCorrectSauceLabs.login(driver, wait); // Podejscie nr 1 ^
 }
