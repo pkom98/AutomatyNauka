@@ -1,7 +1,7 @@
 package SauceLabs;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.logging.Log;
+//import io.github.bonigarcia.wdm.WebDriverManager;
+//import org.apache.commons.logging.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -11,7 +11,7 @@ import java.time.Duration;
 public class FullOrderSauceLabs {
     public static void main(String[] args) {
 
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
         ChromeDriver driver = new ChromeDriver(); // <---------------- WYWOLANIE KONSTRUKTOR
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 

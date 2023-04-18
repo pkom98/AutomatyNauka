@@ -8,14 +8,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ApplicationFormDemoQA {
 
     public static void main(String[] args) throws InterruptedException {
 
 
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
         ChromeDriver driver = new ChromeDriver();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 
