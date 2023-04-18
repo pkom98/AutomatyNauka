@@ -6,22 +6,18 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import shared.BaseTest;
 
 import java.time.Duration;
 
-public class MPKShowBusTimeMain {
+public class MPKShowBusTimeMain extends BaseTest {
     public static void main(String[] args){
+        MPKShowBusTimeMain main = new MPKShowBusTimeMain();
+        main.run();
+    }
 
-//        WebDriverManager.chromedriver().setup();
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Pawel\\Desktop\\chromedriver_win32\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        ChromeDriver driver = new ChromeDriver(options);
-
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
-
-
+    @Override
+    public void run() {
         HomePage homePage = new HomePage(driver, wait);
         BusNumberPage busNumberPage = new BusNumberPage(driver, wait);
 
@@ -31,13 +27,5 @@ public class MPKShowBusTimeMain {
         busNumberPage.SubmitBusNumber();
         busNumberPage.BusStopNameSearch("Podzamcze"); // <----------- Nazwa/ulica przystanku z którego chcesz sprawdzić
         busNumberPage.SubmitBusStopName("Walecznych 02"); // <---------- Nazwa konkretnego przystanku 01/02
-
-
-
-
-
-
-
-
     }
 }

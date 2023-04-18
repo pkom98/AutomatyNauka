@@ -6,15 +6,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
+import shared.BaseTest;
+
 import java.time.Duration;
 
-public class FullOrderSauceLabs {
+public class FullOrderSauceLabs extends BaseTest {
     public static void main(String[] args) {
+        FullOrderSauceLabs fullOrderSauceLabs = new FullOrderSauceLabs();
+        fullOrderSauceLabs.run();
+    }
 
-//        WebDriverManager.chromedriver().setup();
-        ChromeDriver driver = new ChromeDriver(); // <---------------- WYWOLANIE KONSTRUKTOR
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
-
+    @Override
+    public void run() {
         driver.get("https://www.saucedemo.com");
         driver.manage().window().maximize();
 
@@ -80,13 +83,6 @@ public class FullOrderSauceLabs {
 ////
 //        WebElement CheckoutFinishButton = driver.findElement(By.xpath("//*[@id=\"finish\"]"));
 //            CheckoutFinishButton.click();
-
-
-
-
-
-
-
     }
 }
 
