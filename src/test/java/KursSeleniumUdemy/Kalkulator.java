@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Kalkulator {
     public static void main(String[] args) {
 
-       Scanner liczba = new Scanner(System.in);
+        Scanner liczba = new Scanner(System.in);
 
         System.out.println("Podaj pierwszą liczbę: ");
         int firstNumber = liczba.nextInt();
